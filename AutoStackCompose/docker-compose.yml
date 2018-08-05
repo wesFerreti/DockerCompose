@@ -1,0 +1,26 @@
+version: '3'
+services:
+  automaApp:
+    image: wesferreti/autostackapp:1.0
+    container_name: autostack-container
+    ports:
+    - "8080:4200"
+    volumes:
+    - /home/wesley/Documents/Angular/Basics/AutoStack:/app
+    networks: 
+    - autostacknetwork
+  SQLServer:
+    image: wesferreti/sqlserver-linux
+    container_name: sqlserver-container
+    ports:
+    - "1433:1433"
+    volumes:
+    - /home/wesley/Documents/SQL:/home/BancoDeDados
+    networks: 
+    - autostacknetwork
+
+networks:
+  autostacknetwork:
+    driver: bridge
+
+

@@ -1,9 +1,0 @@
-version: '3'
-services:
-  SQLServer:
-    image: wesferreti/sqlserver-linux
-    container_name: SQLServerContainer
-    ports:
-    - "1433:1433"
-    volumes:
-    - /home/wesley/Documents/SQL:/home/BancoDeDados
